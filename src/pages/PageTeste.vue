@@ -1,0 +1,115 @@
+<template>
+    <q-page>
+        <div class="q-pa-md">
+            <q-carousel swipeable animated v-model="slide" thumbnails infinite>
+                <q-carousel-slide :name="1" img-src="../assets/banner1.jpg" />
+                <q-carousel-slide :name="2" img-src="../assets/banner2.jpg" />
+                <q-carousel-slide :name="3" img-src="../assets/banner3.jpg" />
+                <q-carousel-slide :name="4" img-src="../assets/banner4.jpg" />
+            </q-carousel>
+        </div>
+        <div class="q-pa-xl">
+            <h3>Conheça Nossos Programas</h3>
+            <p>Na EMEF Salomão Watnick, buscamos promover o crescimento integral de cada aluno,
+                oferecendo suporte próximo e acompanhamento personalizado ao longo de toda
+                a sua trajetória educacional.</p>
+            <div class="row row-cols-md-1 row-cols-lg-2 row-cols-xl-4">
+                <div class="col">
+                    <img src="../assets/edu-infantil.jpg" class="col-image">
+                    <b>Educação Infantil</b>
+                    <p>Na nossa Educação Infantil, cada criança é vista como protagonista ativa na
+                        construção do conhecimento. Nossa abordagem educacional é centrada nas
+                        necessidades, interesses e motivações individuais de cada criança.</p>
+                </div>
+                <div class="col">
+                    <img src="../assets/edu-inicial.jpg" class="col-image">
+                    <b>Ensino Fundamental Anos Iniciais</b>
+                    <p>O Ensino Fundamental Anos Iniciais é uma fase crucial para o desenvolvimento
+                        integral do aluno. Aqui, priorizamos não só o crescimento acadêmico,
+                        mas também o desenvolvimento biopsicossocial e a formação de valores.</p>
+                </div>
+                <div class="col">
+                    <img src="../assets/edu-fundamental.jpg" class="col-image">
+                    <b>Ensino Fundamental Anos Finais</b>
+                    <p>Durante o Ensino Fundamental Anos Finais, os alunos começam a perceber a
+                        aplicabilidade dos conhecimentos adquiridos, assumindo responsabilidades e
+                        desenvolvendo habilidades críticas e organizacionais.</p>
+                </div>
+                <div class="col">
+                    <img src="../assets/edu-eja.jpg" class="col-image">
+                    <b>EJA (Educação de Jovens e Adultos)</b>
+                    <p>O programa de Educação de Jovens e Adultos oferece uma oportunidade valiosa
+                        para aqueles que buscam concluir seus estudos. Com flexibilidade e apoio
+                        dedicado, ajudamos os alunos a alcançarem seus objetivos educacionais e
+                        profissionais.</p>
+                </div>
+            </div>
+        </div>
+        <a href="/" class="scroll">aaaaaaaaaaa</a>
+        <router-view></router-view>
+    </q-page>
+</template>
+
+<script>
+import { ref } from 'vue'
+
+
+export default {
+    setup() {
+        return {
+            slide: ref(1)
+        }
+    }
+}
+</script>
+
+<style scoped>
+.col {
+    padding: 10px;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+}
+
+.col b {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Adicionando estilos para colunas responsivas */
+@media (max-width: 991px) {
+    .row-cols-md-1 {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .row-cols-lg-2>* {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .row-cols-xl-4>* {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+</style>
