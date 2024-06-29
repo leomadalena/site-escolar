@@ -1,0 +1,46 @@
+// app global css in SCSS form
+p {
+  margin-left: 20px;
+}
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: large;
+}
+
+h1 {
+  color: var(--q-primary);
+}
+h1 {
+  color: var(--q-primary);
+  word-wrap: break-word;
+}
+h2 {
+  color: var(--q-secondary);
+  margin-top: 40px;
+  word-wrap: break-word;
+}
+h3 h4 h5{
+  color: var(--q-secondary);
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+h5{
+  color: black;
+  text-align: center;
+  margin-bottom: 0px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  margin-left: 20px;
+}
+
+.separador {
+  background: #c3daed;
+}
