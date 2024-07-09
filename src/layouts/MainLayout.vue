@@ -12,9 +12,9 @@
         />
 
         <q-toolbar-title>
+          <!--<q-item clickable tag="a" :href="linksList[0].link" style="outline: none!;">{{ globals.companyName }} <q-avatar> <q-img src="assets/logobilinguetrans.gif" /> </q-avatar></q-item>-->
           {{ globals.companyName }}
-          <q-avatar>    <q-img src="assets/logobilinguetrans.gif" />
-          </q-avatar>
+          <q-avatar> <q-img src="assets/logobilinguetrans.gif" /> </q-avatar>
         </q-toolbar-title>
       </q-toolbar>
     </q-header>

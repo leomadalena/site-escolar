@@ -20,29 +20,14 @@
           <strong>2° Ciclo:</strong> Continua o desenvolvimento das habilidades adquiridas no 1º ciclo, aprofundando os conhecimentos e preparando os alunos para o ensino médio. A Língua Portuguesa está presente em sua forma escrita, complementando o aprendizado em Libras.
         </li>
       </ul>
-      <div
-        v-for="(item, index) in dados"
-        :key="index"
-        :class="['row', 'q-pa-md', {'separador': index % 2 === 0, 'bg-white': index % 2 !== 0}]"
-
-        >
-        <div v-if="index % 2 === 0" class="col-6 col-md-6 col-sm-6 col-xs-12 q-pa-md" align="middle">
-          <q-img :src="item.img" class="image rounded-image" />
-        </div>
-        <div class="col-6 col-md-6 col-sm-6 col-xs-12 q-pa-md" align="left">
-          <h2>{{ item.titulo }}</h2>
-          <p>{{ item.corpo }}</p>
-        </div>
-        <div v-if="index % 2 !== 0" class="col-6 col-md-6 col-sm-6 col-xs-12 q-pa-md" align="middle">
-          <q-img :src="item.img" class="image rounded-image" />
-        </div>
-      </div>
+      <item-curriculo :item="dados"/>
     </div>
   </q-page>
 </template>
 
-<script>
-export default {
+<script setup>
+import ItemCurriculo from './ItemCurriculo.vue';
+defineOptions({
   name: "CurriculoExample",
   data() {
     return {
@@ -71,7 +56,7 @@ export default {
       ],
     };
   },
-};
+});
 </script>
 
 <style scoped>
